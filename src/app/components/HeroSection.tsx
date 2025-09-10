@@ -24,7 +24,7 @@ export default function HeroSection() {
           <span className="flex-grow border-t border-1 border-white" />
 
           {/* Right Text */}
-          <span className="text-sm tracking-wide uppercase">
+          <span className="text-xs md:text-xl tracking-wide uppercase">
             Signature Projects
           </span>
         </div>

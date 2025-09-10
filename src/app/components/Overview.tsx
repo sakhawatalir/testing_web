@@ -2,8 +2,8 @@
 export default function Overview() {
   return (
     <section className="py-16 px-6 max-w-5xl mx-auto text-center relative">
-      {/* Center Vertical Line */}
-      <div className="absolute top-0 bottom-0 left-1/2 w-px bg-gray-300 -translate-x-1/2" />
+      {/* Center Vertical Line (sirf desktop pe show) */}
+      <div className="hidden md:block absolute top-0 bottom-0 left-1/2 w-px bg-gray-300 -translate-x-1/2" />
 
       {/* Logo Box */}
       <div className="flex justify-center mb-10 relative z-10">
@@ -16,16 +16,17 @@ export default function Overview() {
         </div>
       </div>
 
-      <div className="flex justify-center gap-[250px] items-start">
+      {/* Quote + Stats */}
+      <div className="flex flex-col md:flex-row justify-center md:gap-20 lg:gap-[250px] items-start text-left md:text-left">
         {/* Quote */}
-        <p className="text-lg text-start text-gray-400 max-w-2xl">
+        <p className="text-lg text-gray-400 max-w-xl mb-8 md:mb-0">
           “Designing Spaces, <br /> Shaping Experiences <br /> & Building Trust
           Across the <span className="font-semibold italic">UAE & Beyond.</span>
           ”
         </p>
 
         {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-1 text-sm text-gray-700">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 text-sm text-gray-700">
           <div>
             <p className="font-semibold">2018</p>
           </div>
@@ -62,51 +63,16 @@ export default function Overview() {
         </div>
       </div>
 
-      {/* <div className="flex justify-between">
-        
-        <p className="text-lg text-start mx-auto  text-gray-400 max-w-2xl mb-10">
-          “Designing Spaces, <br /> Shaping Experiences <br /> & Building Trust
-          Across the <span className="font-semibold italic">UAE & Beyond.</span>
-          ”
-        </p>
-        
-        <div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 text-sm text-gray-700 mb-12">
-            <div>
-              <p className="font-semibold">2018</p>
-            </div>
-            <div>
-              <p className="border-b-[1px]">Branches</p>
-              <p className="font-semibold">Dubai · Bangalore · London</p>
-            </div>
-            <div>
-              <p className="border-dashed border-b-[1px]">Team</p>
-              <p className="font-semibold">120+</p>
-            </div>
-            <div>
-              <p className="border-b-[1px]">Projects Completed</p>
-              <p className="font-semibold">200+</p>
-            </div>
-            <div>
-              <p className="border-b-[1px]">Active Clients</p>
-              <p className="font-semibold">15+</p>
-            </div>
-            <div>
-              <p className="border-b-[1px]">Active Projects</p>
-              <p className="font-semibold">20+</p>
-            </div>
-          </div>
-        </div>
-      </div> */}
-
       {/* Interior vs Architecture */}
-      <div className="flex items-center justify-center mt-[50px] gap-0 relative font-bold text-2xl z-10">
-        <button className="px-6 py-2 border border-gray-400 rounded-full  bg-white">
+      <div className="flex flex-col md:flex-row items-center justify-center mt-12 gap-4 md:gap-6 relative font-bold text-lg md:text-2xl z-10">
+        <button className="px-6 py-2 border border-gray-400 rounded-full bg-white w-full md:w-auto">
           INTERIOR DESIGN
         </button>
-        {/* Horizontal Divider */}
-        <span className="flex-grow max-w-[400px] border-t border-gray-300" />
-        <button className="px-6 py-2 border border-gray-400 rounded-full font-semibold bg-white">
+
+        {/* Horizontal Divider (sirf md and up pe dikhayen) */}
+        <span className="hidden md:block flex-grow max-w-[400px] border-t border-gray-300" />
+
+        <button className="px-6 py-2 border border-gray-400 rounded-full bg-white font-semibold w-full md:w-auto">
           ARCHITECTURE DESIGN
         </button>
       </div>

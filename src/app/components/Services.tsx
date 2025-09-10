@@ -15,11 +15,13 @@ const services = [
 export default function Services() {
   return (
     <>
-      <section className="py-16 px-6 max-w-7xl mx-auto">
+      <section className="py-16 px-6 max-w-7xl mx-auto relative">
         <h2 className="text-2xl font-bold text-center mb-10">SERVICES</h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Vertical Line in center */}
           <div className="absolute top-0 bottom-0 left-1/2 w-px bg-gray-300 -translate-x-1/2" />
+
           {services.map((service) => (
             <div
               key={service.title}
